@@ -1,0 +1,35 @@
+function showDate(){
+var datetime= new Date();
+
+var dateonly=datetime.getDate();
+var dateyear=datetime.getFullYear();
+var datemonth=datetime.getMonth();
+var hours=(datetime.getHours());
+var minutes=(datetime.getMinutes());
+var seconds=(datetime.getSeconds());
+var daytime="AM"; 
+if (hours>12) {
+daytime="PM";
+hours=hours-12;
+}
+if(hours==12)
+daytime="PM"
+var totaltime=dateonly+"/"+datemonth+"/"+dateyear   
+//document.frmAppointment.datetime.value=totaltime;
+document.getElementById("datetime").innerHTML=totaltime;
+}
+function winLocation()
+{
+  
+// window.opener.location.href="appointementlist!search.action";
+ //window.opener.parent.location.href=window.opener.parent.location.href;
+ 
+  
+}
+ function poponload(location)
+{
+testwindow= window.open (location, "mywindow",
+    "width=100,height=500,menubar=no,resizable=yes,status=no,url=no, location=no,toolbar=no,scrollbars=yes");
+testwindow.moveTo(0,0);
+}
+ 
